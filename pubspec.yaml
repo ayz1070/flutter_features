@@ -37,6 +37,7 @@ dependencies:
   equatable:
   uuid:
   velocity_x:
+  firebase_core:
 
 
   # The following adds the Cupertino Icons font to your application.
