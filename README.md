@@ -1,17 +1,35 @@
-# flutter_features
+# Flutter 기능 모음
 
-A new Flutter project.
+프로젝트 수행 및 경험했던 Flutter 기능들을 정리
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 기능 공통 
+- 구조 (클린 아키텍처)
+  - data
+    - data_sources
+    - mappers
+    - models
+    - repository_impls
+  - domain
+    - repositories
+    - use_cases
+    - entities
+  - presentation
+    - bloc
+    - pages
+    - widgets
+    - vm (view_models)
+  
+---
+## 상태 관리
+- [x] bloc
+- [ ] provider
+- [ ] riverpod
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# flutter_features
+---
+## 기능 목록
+- [ ] board (게시판)
+- [ ] cart (장바구니)
+- [ ] point (포인트)
+- [ ] review (리뷰)
