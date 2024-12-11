@@ -37,8 +37,22 @@ dependencies:
   equatable:
   uuid:
   velocity_x:
-  firebase_core:
 
+  # 파이어베이스
+  firebase_core:
+  firebase_auth:
+  cloud_firestore:
+  firebase_storage:
+
+  shimmer:
+  go_router:
+
+
+  kpostal_web:
+
+  flutter_svg:
+  logger:
+  image_picker:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

@@ -1,26 +1,63 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
+import 'core/providers/cart_providers.dart';
+import 'core/routes/routes.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+
+  String initialRoute = '/cart';
+
+  runApp(MyApp(initialRoute: initialRoute));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final String initialRoute;
+
+  const MyApp({super.key, required this.initialRoute});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-          title: 'Flutter Demo',
+
+    final FirebaseFirestore firestore = FirebaseFirestore.instance;
+    final firebaseStorage = FirebaseStorage.instance;
+
+    GoRouter _router = GoRouter(
+      initialLocation: initialRoute,
+      routes: appRoutes,
+    );
+
+    return MultiRepositoryProvider(
+      providers: [
+        ...CartProviders.repositoryProviders(firestore),
+      ],
+      child: MultiBlocProvider(
+        providers: [
+          ...CartProviders.blocProviders,
+        ],
+        child: MaterialApp.router(
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            fontFamily: 'Pretendard',
+            scaffoldBackgroundColor: Colors.white,
+            appBarTheme:
+            const AppBarTheme(backgroundColor: Colors.white),
+            useMaterial3: true,
           ),
-          home: CircularProgressIndicator(),
+          routerConfig: _router, // GoRouter를 사용한 라우팅 설정
+        ),
+      ),
     );
   }
 }

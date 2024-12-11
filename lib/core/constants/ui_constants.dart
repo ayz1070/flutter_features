@@ -1,0 +1,1 @@
+const double customAppBarHeight = 56.0;

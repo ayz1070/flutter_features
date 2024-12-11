@@ -25,6 +25,11 @@ class AppColors {
   static const Color textSecondaryColor = Color(0xFF333333);
   static const Color textTertiaryColor = Color(0xFF666666);
 
+  /// 텍스트 힌트
+  static const Color textHintPrimaryColor = Color(0xFFACB2B5);
+
+  /// 텍스트 필드
+  static const Color textFieldBackgroundPrimaryColor = Color(0xFFF5F6F6);
 
   /// 버튼 관련
   static const Color buttonPrimaryColor = primaryColor;
@@ -40,6 +45,18 @@ class AppColors {
   static const Color unCheckedColor = Colors.white;
   static const Color checkedIconColor = Colors.white;
   static const Color unCheckedIconColor = Color(0xFFE5E5EC);
+
+
+  /// Divider
+  static const Color dividerPrimaryColor = Color(0xFFE6E7E8);
+
+  /// border
+  static const Color borderPrimaryColor = Color(0xFFE6E7E8);
+
+  /// icon
+  static const Color iconStarPrimaryColor = Color(0xFFFFBF40);
+  static const Color iconStarSecondaryColor = Color(0xFFE6E7E8);
+
 
 
 }

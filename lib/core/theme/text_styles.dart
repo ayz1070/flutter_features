@@ -12,6 +12,12 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
   );
 
+  static TextStyle bold18 = const TextStyle(
+    fontSize: 18,
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
+  );
+
   static TextStyle semiBold24 = const TextStyle(
     fontSize: 24,
     color: Colors.black,
@@ -32,6 +38,12 @@ class AppTextStyles {
 
   static TextStyle light20 = const TextStyle(
     fontSize: 20,
+    color: Colors.black,
+    fontWeight: FontWeight.w300,
+  );
+
+  static TextStyle light14 = const TextStyle(
+    fontSize: 14,
     color: Colors.black,
     fontWeight: FontWeight.w300,
   );
@@ -141,6 +153,8 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
   );
 
+
+
   static TextStyle medium10 = const TextStyle(
     fontSize: 10,
     fontWeight: FontWeight.w500,
@@ -165,4 +179,6 @@ class AppTextStyles {
     fontSize: 32,
     fontWeight: FontWeight.w300,
   );
+
+
 }
