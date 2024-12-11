@@ -6,6 +6,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import 'core/providers/cart_providers.dart';
+import 'core/providers/my_grade_providers.dart';
+import 'core/providers/point_providers.dart';
+import 'core/providers/review_providers.dart';
+import 'core/providers/shipping_address_providers.dart';
 import 'core/routes/routes.dart';
 import 'firebase_options.dart';
 
@@ -17,7 +21,7 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  String initialRoute = '/cart';
+  String initialRoute = '/home';
 
   runApp(MyApp(initialRoute: initialRoute));
 }
@@ -41,10 +45,20 @@ class MyApp extends StatelessWidget {
     return MultiRepositoryProvider(
       providers: [
         ...CartProviders.repositoryProviders(firestore),
+        ...ReviewProviders.repositoryProviders(firestore),
+        ...ShippingAddressProviders.repositoryProviders,
+        ...MyGradeProviders.repositoryProviders(firestore), // 등급 관련 의존성 주입,
+        ...PointProviders.repositoryProviders(firestore),
+
+
       ],
       child: MultiBlocProvider(
         providers: [
           ...CartProviders.blocProviders,
+          ...ShippingAddressProviders.blocProviders,
+          ...MyGradeProviders.blocProvider,
+          ...ReviewProviders.blocProviders,
+          ...PointProviders.blocProviders,
         ],
         child: MaterialApp.router(
           debugShowCheckedModeBanner: false,
