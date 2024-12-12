@@ -6,6 +6,7 @@ class AppColors {
   static const Color primaryColor = Color(0xFFEE447B);
   static const Color secondaryColor = Color(0xFFF5F6F6);
 
+  static const Color primaryColorDark = Colors.black;
 
 
   /// 배경
@@ -13,6 +14,7 @@ class AppColors {
   static const Color backgroundSecondaryColor = Color(0xFFF0F0F0);
   static const Color backgroundTertiaryColor = Color(0xFF111111);
 
+  static const Color backgroundPrimaryColorDark = Colors.black;
 
   /// 앱바
   static const Color appBarBackgroundColor = Colors.white;
@@ -24,6 +26,8 @@ class AppColors {
   static const Color textPrimaryColor = Color(0xFF111111);
   static const Color textSecondaryColor = Color(0xFF333333);
   static const Color textTertiaryColor = Color(0xFF666666);
+
+  static const Color textPrimaryColorDark = Colors.white;
 
   /// 텍스트 힌트
   static const Color textHintPrimaryColor = Color(0xFFACB2B5);
