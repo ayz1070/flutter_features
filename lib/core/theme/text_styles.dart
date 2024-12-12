@@ -6,6 +6,18 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
   );
 
+  static TextStyle bold20 = const TextStyle(
+    fontSize: 20,
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle bold24 = const TextStyle(
+    fontSize: 24,
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
+  );
+
   static TextStyle bold28 = const TextStyle(
     fontSize: 28,
     color: Colors.black,

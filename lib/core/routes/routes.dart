@@ -5,7 +5,7 @@ import 'package:flutter_features/features/review/presentation/pages/review_page.
 import 'package:go_router/go_router.dart';
 import '../../features/cart/presentation/pages/cart_page.dart';
 import '../../features/cart/presentation/pages/cart_test_page.dart';
-import '../../home_page.dart';
+import '../../features/home/presentation/pages/home_page.dart';
 
 final List<GoRoute> appRoutes = [
   GoRoute(
