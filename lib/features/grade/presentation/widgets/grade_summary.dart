@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/theme/colors.dart';
 import '../../../../core/theme/text_styles.dart';
@@ -22,26 +22,6 @@ class GradeSummary extends StatelessWidget {
             ),
             SizedBox(
               height: 16,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "예상 등급 산정기간",
-                  style: AppTextStyles.light14.copyWith(
-                    color: AppColors.textSecondaryColor,
-                  ),
-                ),
-                Text(
-                  "2024년 5월~ 현재",
-                  style: AppTextStyles.light14.copyWith(
-                    color: AppColors.textPrimaryColor,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -95,7 +75,7 @@ class GradeSummary extends StatelessWidget {
                 Row(
                   children: [
                     SvgPicture.asset(
-                      "lib/core/assets/icons/icon_grade_welcome.svg",
+                      "assets/icons/icon_grade_welcome.svg",
                       height: 20,
                       width: 20,
                     ),

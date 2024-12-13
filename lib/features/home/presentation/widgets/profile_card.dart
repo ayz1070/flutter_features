@@ -50,13 +50,14 @@ class ProfileCard extends StatelessWidget {
                     await launchUrl(_url);
                   },
                   child: Text(
-                    '깃허브_링크',
+                    'github',
                     style: TextStyle(
                       color: Colors.blue,
                       decoration: TextDecoration.underline,
                     ),
                   ),
                 ),
+                SizedBox(height: 4,),
 
 
                 Row(

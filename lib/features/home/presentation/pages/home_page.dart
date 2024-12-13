@@ -5,7 +5,9 @@ import 'package:flutter_features/features/home/presentation/bloc/home_state.dart
 import 'package:flutter_features/features/home/presentation/widgets/home_body_list_view.dart';
 import 'package:flutter_features/features/home/presentation/widgets/profile_card.dart';
 
+import '../../../../core/theme/text_styles.dart';
 import '../bloc/home_bloc.dart';
+import 'home_skeleton_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,7 +17,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.backgroundPrimaryColorDark,
       appBar: AppBar(
-        title: const Text("플러터 기능"),
+        title: Text("플러터 기능", style: AppTextStyles.bold20.copyWith(color: Colors.white),),
         centerTitle: true,
         actions: [
           Icon(
@@ -25,7 +27,7 @@ class HomePage extends StatelessWidget {
       ),
       body: BlocBuilder<HomeBloc, HomeState>(builder: (context, state) {
         if (state is HomeInitial || state is HomeLoading) {
-          return Center(child: CircularProgressIndicator());
+          return HomeSkeletonPage();
         } else if (state is HomeLoaded) {
           return Column(
             children: [

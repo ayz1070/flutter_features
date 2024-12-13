@@ -16,6 +16,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   Future<void> _onFetchHomeUser(
       FetchGitHubUser event, Emitter<HomeState> emit) async {
     emit(HomeLoading());
+    //await Future.delayed(Duration(seconds: 3));
     try {
       final user = await fetchGitHubUserUseCase.call("ayz1070");
       final viewModel = ProfileViewModel.mapFromEntity(user);

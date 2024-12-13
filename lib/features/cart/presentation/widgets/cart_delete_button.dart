@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_features/core/theme/text_styles.dart';
 
 import '../../../../core/theme/colors.dart';
 
@@ -12,7 +13,8 @@ class CartDeleteButton extends StatelessWidget {
     return OutlinedButton(
       onPressed: onPressed,
       style: OutlinedButton.styleFrom(
-        side: BorderSide(width: 1.0), // 테두리 설정
+
+        side: BorderSide(width: 1.0,color: AppColors.secondaryColorDark,), // 테두리 설정
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(0.0), // 직각 테두리
         ),
@@ -22,11 +24,7 @@ class CartDeleteButton extends StatelessWidget {
       ),
       child: Text(
         '삭제',
-        style: TextStyle(
-          color: Colors.black, // 텍스트 색상
-          fontSize: 11.0, // 텍스트 크기
-          fontWeight: FontWeight.normal, // 텍스트 굵기
-        ),
+        style: AppTextStyles.regular11
       ),
     );
   }

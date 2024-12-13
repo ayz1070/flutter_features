@@ -19,7 +19,10 @@ class MyGradeProfile extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(20, 32, 20, 16),
       child: Container(
         width: double.infinity,
-        color: AppColors.backgroundPrimaryColor,
+        decoration: BoxDecoration(
+          color: AppColors.backgroundPrimaryColor,
+          borderRadius: BorderRadius.circular(4),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -27,8 +30,8 @@ class MyGradeProfile extends StatelessWidget {
               height: 20,
             ),
             SvgPicture.asset(
-              'lib/core/assets/icons/icon_grade_welcome.svg',
-              height: 50.0, // 원하는 크기로 설정
+              'assets/icons/icon_grade_welcome.svg',
+              height: 50.0,
               width: 50.0,
             ),
             SizedBox(width: 16),

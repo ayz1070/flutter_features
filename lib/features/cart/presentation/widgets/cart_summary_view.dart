@@ -27,7 +27,6 @@ class CartSummaryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.backgroundPrimaryColor,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -40,7 +39,6 @@ class CartSummaryView extends StatelessWidget {
                 Text(
                   '주문 상품 수',
                   style: AppTextStyles.regular13.copyWith(
-                    color: AppColors.textSecondaryColor,
                   ),
                 ),
                 Text(
@@ -56,7 +54,6 @@ class CartSummaryView extends StatelessWidget {
                 Text(
                   '총 주문금액',
                   style: AppTextStyles.regular13.copyWith(
-                    color: AppColors.textSecondaryColor,
                   ),
                 ),
                 Text(
@@ -72,7 +69,6 @@ class CartSummaryView extends StatelessWidget {
                 Text(
                   '총 배송비',
                   style: AppTextStyles.regular13.copyWith(
-                    color: AppColors.textSecondaryColor,
                   ),
                 ),
                 Text(
@@ -88,13 +84,11 @@ class CartSummaryView extends StatelessWidget {
                 Text(
                   '총 할인 금액',
                   style: AppTextStyles.regular13.copyWith(
-                    color: AppColors.textSecondaryColor,
                   ),
                 ),
                 Text(
                     "-${Formatter.formatPrice(discount)}",
                     style: AppTextStyles.semiBold13.copyWith(
-                      color: Color(0xFFFF4F4D),
                     )
                 ),
               ],
@@ -110,7 +104,6 @@ class CartSummaryView extends StatelessWidget {
                 Text(
                   '총 결제 금액',
                   style: AppTextStyles.regular16.copyWith(
-                    color: AppColors.textSecondaryColor,
                   ),
                 ),
                 Text(
@@ -124,9 +117,7 @@ class CartSummaryView extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: Text(
                 '구매 시 +${Formatter.formatPrice(rewardPoints)} 적립 (포인트 적립 적용 구현 필요)',
-                style: AppTextStyles.regular11.copyWith(
-                  color: Color(0xFF322BFE),
-                ),
+                style: AppTextStyles.regular11
               ),
             ),
             SizedBox(height: 20),

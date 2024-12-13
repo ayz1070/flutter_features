@@ -14,7 +14,6 @@ class CartEmptyView extends StatelessWidget {
           SizedBox(height: 45,),
           Container(
             decoration: BoxDecoration(
-              color: AppColors.backgroundPrimaryColor,
               borderRadius: BorderRadius.circular(8), // 둥근 모서리
             ),
             width: double.infinity,
@@ -39,7 +38,6 @@ class CartEmptyView extends StatelessWidget {
                   child: Text(
                     '쇼핑하러 가기',
                     style: AppTextStyles.medium14
-                        .copyWith(color: AppColors.textPrimaryColor),
                   ),
                 ),              ],
             ),

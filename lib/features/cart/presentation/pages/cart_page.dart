@@ -33,7 +33,6 @@ class _CartPageState extends State<CartPage> {
           // cartProducts가 비어있는 경우 CartEmptyView 반환
           if (state.cartProducts.isEmpty) {
             return Scaffold(
-              backgroundColor: AppColors.backgroundSecondaryColor,
               appBar: CartAppBar(
                   title: "장바구니", onBackPressed: Navigator.of(context).pop),
               body: CartEmptyView(),
@@ -42,7 +41,6 @@ class _CartPageState extends State<CartPage> {
 
           // cartProducts가 비어있지 않은 경우 CartLoadedView 반환
           return Scaffold(
-            backgroundColor: AppColors.backgroundSecondaryColor,
             appBar: CartAppBar(
                 title: "장바구니", onBackPressed: Navigator.of(context).pop),
             body: SafeArea(

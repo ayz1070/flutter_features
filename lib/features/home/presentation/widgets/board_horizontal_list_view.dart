@@ -12,11 +12,8 @@ class BoardHorizontalListView extends StatelessWidget {
       height: 200,
       child: ListView(
         scrollDirection: Axis.horizontal,
-        children: const [
-          HomeListItem(title: "게시판"),
-          HomeListItem(title: "테스트"),
-          HomeListItem(title: "아무거나"),
-          HomeListItem(title: "룰루랄라"),
+        children:  [
+          HomeListItem(title: "게시판",imagePath: "assets/images/board.png", onPressed: (){},),
         ],
       ),
     );
