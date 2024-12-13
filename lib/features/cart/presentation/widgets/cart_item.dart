@@ -30,11 +30,9 @@ class CartItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
       decoration: BoxDecoration(
-        color: AppColors.backgroundPrimaryColor,
         borderRadius: BorderRadius.circular(8.0),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
             blurRadius: 5,
             offset: Offset(0, 2),
           ),
@@ -81,7 +79,7 @@ class CartItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "스토어 (데이터 필요함)",
+                    "Apple",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
@@ -99,16 +97,14 @@ class CartItem extends StatelessWidget {
                   ),
                   SizedBox(height: 4),
                   Text(
-                    '옵션 : (뭔값임?)',
+                    '옵션 : RAM 16GB SSD 1TB',
                     style: TextStyle(
-                      color: Colors.grey,
                       fontSize: 12,
                     ),
                   ),
                   Text(
                     '구매 수량 : ${item.quantity}',
                     style: TextStyle(
-                      color: Colors.grey,
                       fontSize: 12,
                     ),
                   ),
@@ -129,7 +125,6 @@ class CartItem extends StatelessWidget {
                 '${Formatter.formatPrice(item.price)}',
                 style: AppTextStyles.regular12.copyWith(
                   decoration: TextDecoration.lineThrough,
-                  decorationColor: Color(0xFF666666),
                 )
               ),
               SizedBox(
@@ -140,7 +135,7 @@ class CartItem extends StatelessWidget {
                 style: AppTextStyles.semiBold15,
               ),
               Spacer(),
-              CartBuyButton(title: "바로구매하기", onPressed: onDelete)
+              CartBuyButton(title: "바로구매하기", onPressed: (){})
             ],
           ),
         ],

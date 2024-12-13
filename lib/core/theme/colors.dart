@@ -7,6 +7,8 @@ class AppColors {
   static const Color secondaryColor = Color(0xFFF5F6F6);
 
   static const Color primaryColorDark = Colors.black;
+  static const Color secondaryColorDark = Color(0xFF333333);
+  static const Color tertiaryColorDark = Color(0xFF666666);
 
 
   /// 배경
@@ -15,6 +17,8 @@ class AppColors {
   static const Color backgroundTertiaryColor = Color(0xFF111111);
 
   static const Color backgroundPrimaryColorDark = Colors.black;
+  static const Color backgroundSecondaryColorDark = Color(0xFF333333);
+  static const Color backgroundTertiaryColorDark = Color(0xFF666666);
 
   /// 앱바
   static const Color appBarBackgroundColor = Colors.white;
@@ -45,10 +49,10 @@ class AppColors {
   static const Color skeletonSecondaryColor = Color(0xFFF5F5F5);
 
   /// 체크박스
-  static const Color checkedColor = Color(0xFF111111);
-  static const Color unCheckedColor = Colors.white;
+  static const Color checkedColor = Color(0xFF666666);
+  static const Color unCheckedColor = Color(0xFF333333);
   static const Color checkedIconColor = Colors.white;
-  static const Color unCheckedIconColor = Color(0xFFE5E5EC);
+  static const Color unCheckedIconColor = Color(0xFF333333);
 
 
   /// Divider

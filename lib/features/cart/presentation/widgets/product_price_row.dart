@@ -27,7 +27,7 @@ class ProductPriceRow extends StatelessWidget {
         // 할인된 가격
         Text(
           '${item.discountPrice}원',
-          style: AppTextStyles.medium14.copyWith(color: AppColors.primaryColor),
+          style: AppTextStyles.medium14.copyWith(),
         ),
       ],
     );

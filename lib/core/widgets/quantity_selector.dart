@@ -19,7 +19,7 @@ class QuantitySelector extends StatelessWidget {
       width: 74,
       height: 24,
       decoration: BoxDecoration(
-        border: Border.all(color: AppColors.textPrimaryColor),
+        border: Border.all(color: AppColors.secondaryColorDark),
         borderRadius: BorderRadius.circular(4),
       ),
       child: Row(
@@ -36,12 +36,12 @@ class QuantitySelector extends StatelessWidget {
               height: 24,
               child: Icon(
                 Icons.remove,
-                color: Colors.grey,
                 size: 12,
               ),
             ),
           ),
           Container(
+            color: AppColors.secondaryColorDark,
             width: 1,
             height: 24,
           ),
@@ -54,6 +54,7 @@ class QuantitySelector extends StatelessWidget {
             ),
           ),
           Container(
+            color:AppColors.secondaryColorDark,
             width: 1,
             height: 24,
           ),
@@ -66,7 +67,6 @@ class QuantitySelector extends StatelessWidget {
               height: 24,
               child: Icon(
                 Icons.add,
-                color: Colors.grey,
                 size: 12,
               ),
             ),

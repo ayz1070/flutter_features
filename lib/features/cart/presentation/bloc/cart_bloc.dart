@@ -233,7 +233,7 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     //TODO : Product 테스트 데이터 상품 완료되면 수정하기
     Product testProduct = Product(
         id: "test_product_id",
-        name: "[애플] 2중 기능성 앰플",
+        name: "[애플] 맥북 에어",
         brand: "brand",
         category: "category",
         description: "description",

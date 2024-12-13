@@ -28,7 +28,6 @@ class CartPageButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 17.0),
           minimumSize: const Size(double.infinity, 52),
-          backgroundColor: AppColors.buttonSecondaryColor,
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(4.0),

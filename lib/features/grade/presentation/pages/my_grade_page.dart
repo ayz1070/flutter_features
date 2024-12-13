@@ -6,11 +6,9 @@ import '../../domain/usecases/fetch_login_user_grade_use_case.dart';
 import '../bloc/my_grade_bloc.dart';
 import '../bloc/my_grade_event.dart';
 import '../bloc/my_grade_state.dart';
+import '../widgets/grade_card_list.dart';
 import '../widgets/grade_summary.dart';
 import '../widgets/my_grade_profile.dart';
-import '../widgets/my_grade_tab_bar.dart';
-import '../widgets/grade_standard_detail.dart';
-import '../widgets/grade_list_item.dart';
 
 class MyGradePage extends StatelessWidget {
   MyGradePage();
@@ -31,7 +29,6 @@ class MyGradePage extends StatelessWidget {
           appBar: AppBar(
             title: Text(
               '멤버십',
-              style: AppTextStyles.bold18,
             ),
             leading: Icon(Icons.arrow_back),
             centerTitle: true,
@@ -42,15 +39,18 @@ class MyGradePage extends StatelessWidget {
               if (state is MyGradeLoadingState) {
                 return Center(child: CircularProgressIndicator());
               } else if (state is MyGradeLoadedState) {
-                return Column(
-                  children: [
-                    MyGradeProfile(
-                      userGrade: state.userGrade,
-                      grade: state.grades.first,
-                    ),
-                    GradeSummary(),
-
-                  ],
+                return Container(
+                  child: ListView(
+                    children: [
+                      MyGradeProfile(
+                        userGrade: state.userGrade,
+                        grade: state.grades.first,
+                      ),
+                      GradeSummary(),
+                      SizedBox(height: 36,),
+                      GradeCardList(),
+                    ],
+                  ),
                 );
               } else if (state is MyGradeErrorState) {
                 return Center(child: Text('오류: ${state.message}')); // 에러 발생 시

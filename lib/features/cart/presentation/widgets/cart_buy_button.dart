@@ -19,7 +19,6 @@ class CartBuyButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         minimumSize: const Size(0, 30),
-        backgroundColor: AppColors.buttonSecondaryColor,
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(0.0),

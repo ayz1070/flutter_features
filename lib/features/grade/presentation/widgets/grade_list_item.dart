@@ -25,7 +25,7 @@ class GradeListItem extends StatelessWidget {
           width: 50,
           height: 50,
           child: Image.asset(
-            'lib/core/assets/icons/icon_grade_${grade.name}.png',
+            'assets/icons/icon_grade_${grade.name}.png',
             width: 40,
             height: 40,
           ),
@@ -49,17 +49,16 @@ class GradeListItem extends StatelessWidget {
             SizedBox(height: 4),
             Text(
               '상시 추가 할인 ${grade.discountRate * 100}%',
-              style: AppTextStyles.semiBold14,
+              style: AppTextStyles.semiBold14.copyWith(color: Colors.red),
             ),
           ],
         ),
         trailing: Icon(
           Icons.arrow_forward_ios,
-          color: Colors.black,
+
           size: 18,
         ),
         onTap: () {
-          context.go('/my/grade/${grade.name}');
         },
       ),
     );

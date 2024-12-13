@@ -27,11 +27,12 @@ class HomeBodyListView extends StatelessWidget {
       
           /// 게시판
           Text(
-            "게시판",
+            "커뮤니티",
             style: AppTextStyles.bold20.copyWith(
               color: Colors.white,
             ),
           ),
+          SizedBox(height: 16),
           BoardHorizontalListView(),
         ],
       ),

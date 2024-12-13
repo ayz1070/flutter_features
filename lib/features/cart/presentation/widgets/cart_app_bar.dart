@@ -16,8 +16,7 @@ class CartAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.appBarBackgroundColor,
-      title: Text(title),
+      title: Text(title, style: AppTextStyles.bold16,),
       centerTitle: true,
       leading: IconButton(
         icon: Icon(Icons.arrow_back),
