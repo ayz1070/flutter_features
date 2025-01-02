@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_features/core/theme/colors.dart';
 import 'package:flutter_features/core/theme/text_styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../vm/profile_view_model.dart';
@@ -15,16 +16,20 @@ class ProfileCard extends StatelessWidget {
     return Card(
       margin: EdgeInsets.all(8.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16.0)),
-      elevation: 4.0,
+      elevation: 10.0,
+      shadowColor: Colors.white,
+      clipBehavior: Clip.antiAliasWithSaveLayer,
       child: Container(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             // 프로필 이미지
             CircleAvatar(
               radius: 50,
               backgroundImage: NetworkImage(profileViewModel.avatarUrl),
+            ),
+            SizedBox(
+              width: 24,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,13 +40,17 @@ class ProfileCard extends StatelessWidget {
                       : profileViewModel.login,
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 8,),
+                SizedBox(
+                  height: 8,
+                ),
                 Text(
                   profileViewModel.bio,
                   style: TextStyle(fontSize: 16),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 16,),
+                SizedBox(
+                  height: 16,
+                ),
                 GestureDetector(
                   onTap: () async {
                     if (!await launchUrl(_url)) {
@@ -57,23 +66,25 @@ class ProfileCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 4,),
-
-
+                SizedBox(
+                  height: 4,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     _buildInfoColumn('Repos', profileViewModel.publicRepos),
-                    SizedBox(width: 20,),
+                    SizedBox(
+                      width: 20,
+                    ),
                     _buildInfoColumn('Follower', profileViewModel.followers),
-                    SizedBox(width: 20,),
+                    SizedBox(
+                      width: 20,
+                    ),
                     _buildInfoColumn('Following', profileViewModel.following),
                   ],
                 ),
               ],
             ),
-
-            // 추가 정보
           ],
         ),
       ),
@@ -83,7 +94,10 @@ class ProfileCard extends StatelessWidget {
   Widget _buildInfoColumn(String label, int count) {
     return Column(
       children: [
-        Text(label, style: AppTextStyles.bold16,),
+        Text(
+          label,
+          style: AppTextStyles.bold16,
+        ),
         Text(
           '$count',
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
