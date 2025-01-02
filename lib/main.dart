@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -30,7 +32,6 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   final String initialRoute;
-
 
   MyApp({super.key, required this.initialRoute});
 
@@ -66,7 +67,15 @@ class MyApp extends StatelessWidget {
         child: MaterialApp.router(
           debugShowCheckedModeBanner: false,
           theme: AppTheme.darkTheme,
-          routerConfig: _router, // GoRouter를 사용한 라우팅 설정
+          routerConfig: _router,
+          builder: (BuildContext context, Widget? child) {
+            return Center(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(maxWidth: 600),
+                child: child,
+              ),
+            );
+          },
         ),
       ),
     );

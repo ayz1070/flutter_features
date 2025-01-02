@@ -29,11 +29,14 @@ class HomePage extends StatelessWidget {
         if (state is HomeInitial || state is HomeLoading) {
           return HomeSkeletonPage();
         } else if (state is HomeLoaded) {
-          return Column(
-            children: [
-              ProfileCard(profileViewModel: state.profileViewModel),
-              HomeBodyListView(),
-            ],
+          return Container(
+            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+            child: Column(
+              children: [
+                ProfileCard(profileViewModel: state.profileViewModel),
+                HomeBodyListView(),
+              ],
+            ),
           );
         } else {
           return Center(
