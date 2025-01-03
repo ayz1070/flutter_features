@@ -35,6 +35,10 @@ class ShoppingHorizontalListView extends StatelessWidget {
               title: "리뷰",
               imagePath: "assets/images/review.png",
               onPressed: () => context.push("/review")),
+          HomeListItem(
+              title: "리뷰",
+              imagePath: "assets/images/review.png",
+              onPressed: () => context.push("/review")),
         ],
       ),
     );
